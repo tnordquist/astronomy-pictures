@@ -7,7 +7,7 @@ Water reminder is an Android app, intended for anyone. Users will input informat
 
 Gym goers and people in general who know the importance of water, and would like to have the ease of simple reminders. 
 
-> As a <person who likes to keep track of my water intake (_who_)> I want to <make use of a reminder to let me know how much water I have consumed (_what_)> so that <everyone can have the sense of accomplished goals (_why_).
+> As a <person who likes to keep track of my water intake. I want to <make use of a reminder to let me know how much water I have consumed, so that <everyone can have the sense of accomplished goals.
 
 Gym goers or people who require daily water intake as a way to stay healthy or promote weight loss. It encourages and motivates to keep drinking water. 
 

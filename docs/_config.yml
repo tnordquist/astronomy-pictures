@@ -10,8 +10,8 @@ titles_from_headings:
 
 title: "Water reminder"
 description: "An app to help with water intake goals"
-author: Royce Reano
-  name: "Java+Android Student"
+author:
+  name: "Royce Reano"
 
 # Do not change the following line.
   copyright: true
