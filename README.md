@@ -1,3 +1,5 @@
-# Android project proposal starter
+# Water Reminder    
 
-This is a project template for all phases&mdash;from proposal to final delivery&mdash;of the personal Android project in the [Deep Dive Coding](https://deepdivecoding.com/) [Java + Android bootcamp](https://deepdivecoding.com/java-android/).
+My proposed app will be a simple tool for people to be able to input personal water goals. May it be daily 
+or weekly the user will make that decision with the apps pre questionnaire. It will let the user input 
+age, sex, weight and fitness activity. 
