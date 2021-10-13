@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.waterreminder;
+package edu.cnm.deepdive.astronomypictures;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

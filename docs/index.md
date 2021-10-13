@@ -1,35 +1,37 @@
 ## Summary
 
-Water reminder is an Android app, a simple convenient tool to track water intake. The application will provide information 
-for recommended water intake based on if user exercises, age, sex, and weight. 
+Astronomy pictures is an android app, to look at astronomy images provided by NASA's API.
+Image search within the app to find specific images from any date, and random image generator.
+When an image is generated a description is also provided about what the image is. 
 
 
 ## Intended users
  
- * Gym goers who routinely go to the gym, and need a tool to help them keep track of water intake. 
+ * Amateur Astronomers. 
 
-> As a <person who likes to keep track of my water intake. I want to <make use of a reminder to let me know how much water I have consumed, so that <everyone can have the sense of accomplished goals.
+> As someone who has a strong interest in Astronomy, an app to show me images provided by NASA and have a full description of the image is useful to what I study about space.
 
-* Office Workers require water! Sitting in a chair for long periods of time can cause headaches, fatigue, and decreased memory. 
-  It is important to stay hydrated when sitting for prolonged hours. 
+* College Students. 
 
-> As someone who currently attends a coding bootcamp, I need an app that will remind me to drink water throughout the day. Doing constant work and having to pay attention to the content the instructor is giving us. Sometimes we forget to drink water and this is the intended purpose for a water reminder app. 
+> As someone who is a college student, using another source of reference in what I study is helpful. 
  
 ## Functionality
 
-* Users will use sliders to input data for age, sex, weight, and if the user exercises. 
+* Users can open the app and automatically be greeted with a picture for the day. 
 
-* Users can use a slider to select units of measure  
+* Users can search for specific images, with a given desired date. 
+
+* Users can randomly generate images with a random date, using the random generate feature.
 
 ## Persistent data
 
-* Ability to track water intake throughout the week 
+* Ability to store images within the app to a favorite's menu.
 
     
 ## Device/external services
  
-* Notification allowance for reminders
+* Notification when new daily image has generated from the API 
 
 ## Stretch goals/possible enhancements 
 
-Ability to add other types of beverages not limited to water 
+Ability to save images to device directly. 
