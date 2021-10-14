@@ -1,9 +1,9 @@
 ## Summary
 
 Astronomy pictures is an android app, to look at astronomy images provided by NASA's API.
-Image search within the app to find specific images from any date, and random image generator.
-When an image is generated a description is also provided about what the image is. 
-
+When you first open the app the astronomy picture for the day will be loaded into the main screen.
+When an image is generated a description is also provided for the image and a slider in the main screen is used to see the description. 
+Users can also access a calendar feature to look back at previous Astronomy pictures of the day with a drop-down menu. 
 
 ## Intended users
  
@@ -21,17 +21,15 @@ When an image is generated a description is also provided about what the image i
 
 * Users can search for specific images, with a given desired date. 
 
-* Users can randomly generate images with a random date, using the random generate feature.
 
 ## Persistent data
 
-* Ability to store images within the app to a favorite's menu.
+* Ability to store images within the app to a favorite's menu
 
-    
 ## Device/external services
  
 * Notification when new daily image has generated from the API 
 
 ## Stretch goals/possible enhancements 
 
-Ability to save images to device directly. 
+Ability to save images to device directly
