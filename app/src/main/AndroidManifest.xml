@@ -3,7 +3,7 @@
   package="edu.cnm.deepdive.astronomypictures">
 
   <application
-    android:name="edu.cnm.deepdive.astronomypictures.WaterReminderApplication"
+    android:name="edu.cnm.deepdive.astronomypictures.AstronomyPicturesApplication"
     android:allowBackup="false"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
