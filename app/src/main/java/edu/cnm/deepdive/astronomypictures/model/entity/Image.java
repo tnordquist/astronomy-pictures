@@ -10,10 +10,10 @@ import java.util.Date;
 
 @SuppressWarnings({ "NotNullFieldNotInitialized"})
 @Entity(
-    tableName = "image"
-//    indices = {
-//        @Index(value = {"date"}, unique = true)
-//    }
+    tableName = "image",
+    indices = {
+        @Index(value = {"date"}, unique = true)
+    }
 )
 public class Image {
 
@@ -24,8 +24,8 @@ public class Image {
   @NonNull
   private Date created = new Date();
 
-//  @NonNull
-//  private LocalDate date;
+  @NonNull
+  private LocalDate date;
 
   @NonNull
   private String title;
@@ -60,14 +60,14 @@ public class Image {
     this.created = created;
   }
 
-//  @NonNull
-//  public LocalDate getDate() {
-//    return date;
-//  }
+  @NonNull
+  public LocalDate getDate() {
+    return date;
+  }
 
-//  public void setDate(@NonNull LocalDate date) {
-//    this.date = date;
-//  }
+  public void setDate(@NonNull LocalDate date) {
+    this.date = date;
+  }
 
   @NonNull
   public String getTitle() {

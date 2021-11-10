@@ -65,10 +65,10 @@ private static Application context;
       return (value != null) ? value.toEpochDay() : null;
     }
 
-//    @TypeConverter
-//    public static LocalDate longToLocalDate(Long value) {
-//      return (value != null) ? new LocalDa : null;
-//    }
+    @TypeConverter
+    public static LocalDate longToLocalDate(Long value) {
+      return (value != null) ? LocalDate.ofEpochDay(value) : null;
+    }
 
   }
 }
