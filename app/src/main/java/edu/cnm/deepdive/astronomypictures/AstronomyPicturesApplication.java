@@ -2,18 +2,28 @@ package edu.cnm.deepdive.astronomypictures;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import com.squareup.picasso.Picasso;
+import edu.cnm.deepdive.astronomypictures.service.AstronomyDatabase;
+import io.reactivex.schedulers.Schedulers;
 
-/**
- * Initializes (in the {@link #onCreate()} method) application-level resources. This class
- * <strong>must</strong> be referenced in {@code AndroidManifest.xml}, or it will not be loaded and
- * used by the Android system.
- */
 public class AstronomyPicturesApplication extends Application {
 
   @Override
   public void onCreate() {
     super.onCreate();
+    Picasso.setSingletonInstance(
+        new Picasso.Builder(this)
+            .loggingEnabled(BuildConfig.DEBUG)
+            .build()
+    );
     Stetho.initializeWithDefaults(this);
+    AstronomyDatabase.setContext(this);
+    AstronomyDatabase
+        .getInstance()
+        .getImageDao()
+        .delete()
+        .subscribeOn(Schedulers.io())
+        .subscribe();
   }
 
 }
