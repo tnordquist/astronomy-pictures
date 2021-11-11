@@ -12,12 +12,10 @@ import java.util.List;
 
 public class ImageRepository {
 
-  //field
   private final Application context;
   private final ImageDao imageDao;
 
 
-  //constructor
   public ImageRepository(Application context) {
     this.context = context;
     imageDao = AstronomyDatabase
