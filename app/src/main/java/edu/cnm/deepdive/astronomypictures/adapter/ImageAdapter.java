@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import edu.cnm.deepdive.astronomypictures.databinding.ItemImageBinding;
 import edu.cnm.deepdive.astronomypictures.model.entity.Image;
 import java.text.DateFormat;
 import java.util.List;
@@ -15,7 +16,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.Holder> {
   private final DateFormat dateFormat;
   private final List<Image> images;
 
-  public ImageAdapter(Context context, List<Image> notes) {
+  public ImageAdapter(Context context, List<Image> images) {
     inflater = LayoutInflater.from(context);
     dateFormat = android.text.format.DateFormat.getDateFormat(context);
     this.images = images;
@@ -47,10 +48,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.Holder> {
     }
 
     private void bind(int position) {
-      Image note = image.get(position);
-      binding.subject.setText(note.getSubject());
-      binding.updated.setText(dateFormat.format(note.getUpdated()));
-      binding.text.setText(image.getText());
+      Image note = images.get(position);
+//      binding.subject.setText(note.getSubject());
+//      binding.updated.setText(dateFormat.format(note.getUpdated()));
+//      binding.text.setText(image.getText());
     }
   }
 }

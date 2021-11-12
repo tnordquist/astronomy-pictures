@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.astronomypictures.ui.slideshow;
+package edu.cnm.deepdive.astronomypictures.controller.ui.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.astronomypictures.R;
 import edu.cnm.deepdive.astronomypictures.databinding.FragmentSlideshowBinding;
 
 public class SlideshowFragment extends Fragment {

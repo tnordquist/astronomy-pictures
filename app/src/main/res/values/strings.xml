@@ -10,4 +10,8 @@
   <string name="menu_home">Home</string>
   <string name="menu_gallery">Gallery</string>
   <string name="menu_slideshow">Slideshow</string>
+  <string name="menu_image">Images</string>
+  <string name="add_image">Add new image</string>
+  <string name="save_label">Save image</string>
+  <string name="cancel_label">Cancel</string>
 </resources>

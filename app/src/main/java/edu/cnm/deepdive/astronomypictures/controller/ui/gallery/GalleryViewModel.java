@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.astronomypictures.ui.gallery;
+package edu.cnm.deepdive.astronomypictures.controller.ui.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

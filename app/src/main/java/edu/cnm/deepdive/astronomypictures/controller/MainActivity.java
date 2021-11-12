@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.astronomypictures;
+package edu.cnm.deepdive.astronomypictures.controller;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import edu.cnm.deepdive.astronomypictures.R;
 import edu.cnm.deepdive.astronomypictures.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,13 +27,6 @@ public class MainActivity extends AppCompatActivity {
     setContentView(binding.getRoot());
 
     setSupportActionBar(binding.appBarMain.toolbar);
-    binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show();
-      }
-    });
     DrawerLayout drawer = binding.drawerLayout;
     NavigationView navigationView = binding.navView;
     // Passing each menu ID as a set of Ids because each

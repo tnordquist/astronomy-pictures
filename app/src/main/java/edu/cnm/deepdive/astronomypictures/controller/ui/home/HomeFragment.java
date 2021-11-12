@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.astronomypictures.ui.gallery;
+package edu.cnm.deepdive.astronomypictures.controller.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,24 +10,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.astronomypictures.R;
-import edu.cnm.deepdive.astronomypictures.databinding.FragmentGalleryBinding;
+import edu.cnm.deepdive.astronomypictures.databinding.FragmentHomeBinding;
 
-public class GalleryFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-  private GalleryViewModel galleryViewModel;
-  private FragmentGalleryBinding binding;
+  private HomeViewModel homeViewModel;
+  private FragmentHomeBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    galleryViewModel =
-        new ViewModelProvider(this).get(GalleryViewModel.class);
+    homeViewModel =
+        new ViewModelProvider(this).get(HomeViewModel.class);
 
-    binding = FragmentGalleryBinding.inflate(inflater, container, false);
+    binding = FragmentHomeBinding.inflate(inflater, container, false);
     View root = binding.getRoot();
 
-    final TextView textView = binding.textGallery;
-    galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    final TextView textView = binding.textHome;
+    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

@@ -19,7 +19,7 @@ Users can also access a calendar feature to look back at previous Astronomy pict
 
 * College Students. 
 
-> As someone who is a college student, using another source of reference in what I study is helpful. 
+> As someone who will be studying Astrophysics in college. This app will help with getting information about astronomy based pictures relevant to my field of study, I like that when the picture of the day pops up in the app it shows the picture and gives a brief description of the picture as well. 
  
 ## Functionality
 
@@ -27,14 +27,20 @@ Users can also access a calendar feature to look back at previous Astronomy pict
 
 * Users can search for specific images, with a given desired date. 
 
+* Users can favorite the image of the day in the home screen using the button in the upper right.
+
+* Within the app users can use a slider button to read the description of the image of the day. 
+
 
 ## Persistent data
 
 * Ability to store images within the app to a favorite's menu
 
+* Google sign in will store users data. 
+
 ## Device/external services
  
-* Notification when new daily image has generated from the API 
+* Notification when new daily image has generated from the API
 
 ## Stretch goals/possible enhancements 
 

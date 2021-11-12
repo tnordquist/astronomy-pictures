@@ -5,4 +5,4 @@ menu: ERD
 order: 10
 ---
 
-[![ERD](images/astronomypics-erd.svg)](pdf/astronomypics-erd.pdf)
+[![ERD](images/APOD_ERD.drawio.svg)](pdf/APOD_ERD.drawio.pdf)

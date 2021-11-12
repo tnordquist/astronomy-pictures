@@ -8,18 +8,46 @@
   <fragment
     android:id="@+id/nav_home"
     android:label="@string/menu_home"
-    android:name="edu.cnm.deepdive.astronomypictures.ui.home.HomeFragment"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.ui.home.HomeFragment"
     tools:layout="@layout/fragment_home"/>
 
   <fragment
     android:id="@+id/nav_gallery"
     android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.astronomypictures.ui.gallery.GalleryFragment"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.ui.gallery.GalleryFragment"
     tools:layout="@layout/fragment_gallery"/>
 
   <fragment
     android:id="@+id/nav_slideshow"
     android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.astronomypictures.ui.slideshow.SlideshowFragment"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.ui.slideshow.SlideshowFragment"
     tools:layout="@layout/fragment_slideshow"/>
+
+  <fragment
+    android:id="@+id/nav_image"
+    android:label="@string/menu_image"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.ImageFragment"
+    tools:layout="@layout/fragment_image">
+
+    <action
+      android:id="@+id/edit_image"
+      app:destination="@id/nav_edit_image">
+
+      <argument
+        android:name="image_id"
+        app:argType="long"
+        android:defaultValue="0L"/>
+
+    </action>
+  </fragment>
+
+  <dialog
+    android:id="@+id/nav_edit_image"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.EditImageFragment">
+
+    <argument
+      android:name="image_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+  </dialog>
 </navigation>
