@@ -11,7 +11,11 @@
   <string name="menu_gallery">Gallery</string>
   <string name="menu_slideshow">Slideshow</string>
   <string name="menu_image">Images</string>
+  <string name="login_failure_message">Unable to sign in with the provided credentials</string>
   <string name="add_image">Add new image</string>
   <string name="save_label">Save image</string>
   <string name="cancel_label">Cancel</string>
+  <string name="sign_out">Sign out</string>
+  <string name="astronomy_image_description">Image Description</string>
+  <string name="menu_astronomy_pictures">AstronomyPictures</string>
 </resources>

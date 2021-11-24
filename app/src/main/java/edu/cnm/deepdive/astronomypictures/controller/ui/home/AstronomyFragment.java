@@ -10,23 +10,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.astronomypictures.databinding.FragmentHomeBinding;
+import edu.cnm.deepdive.astronomypictures.databinding.FragmentAstronomyBinding;
 
-public class HomeFragment extends Fragment {
+public class AstronomyFragment extends Fragment {
 
-  private HomeViewModel homeViewModel;
-  private FragmentHomeBinding binding;
+  private AstronomyPicturesViewModel astronomyPicturesViewModel;
+  private FragmentAstronomyBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    homeViewModel =
-        new ViewModelProvider(this).get(HomeViewModel.class);
+    astronomyPicturesViewModel =
+        new ViewModelProvider(this).get(AstronomyPicturesViewModel.class);
 
-    binding = FragmentHomeBinding.inflate(inflater, container, false);
+    binding = FragmentAstronomyBinding.inflate(inflater, container, false);
     View root = binding.getRoot();
 
-    final TextView textView = binding.textHome;
-    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    final TextView textView = binding.textAstronomypictures;
+    astronomyPicturesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);
