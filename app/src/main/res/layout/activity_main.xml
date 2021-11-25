@@ -9,14 +9,6 @@
   android:fitsSystemWindows="true"
   tools:openDrawer="start">
 
-  <ImageView
-    android:id="@+id/images"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:scaleType="fitCenter"
-    android:adjustViewBounds="true"
-    android:contentDescription="@string/astronomy_image_description"/>
-
   <include
     android:id="@+id/app_bar_main"
     layout="@layout/app_bar_main"
@@ -29,7 +21,6 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
-    app:headerLayout="@layout/nav_header_main"
     app:menu="@menu/activity_main_drawer"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

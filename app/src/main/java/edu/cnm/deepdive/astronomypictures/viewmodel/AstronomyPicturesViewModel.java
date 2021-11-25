@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.astronomypictures.controller.ui.home;
+package edu.cnm.deepdive.astronomypictures.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -10,7 +10,6 @@ public class AstronomyPicturesViewModel extends ViewModel {
 
   public AstronomyPicturesViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is home fragment");
   }
 
   public LiveData<String> getText() {
