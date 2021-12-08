@@ -3,29 +3,24 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@+id/nav_astronomypictures">
+  app:startDestination="@+id/nav_astronomy_pictures">
 
   <action
     android:id="@+id/open_settings"
     app:destination="@+id/nav_settings"/>
 
   <fragment
-    android:id="@+id/nav_astronomypictures"
+    android:id="@+id/nav_astronomy_pictures"
     android:label="@string/menu_astronomy_pictures"
     android:name="edu.cnm.deepdive.astronomypictures.controller.AstronomyFragment"
     tools:layout="@layout/fragment_astronomy"/>
 
-  <fragment
-    android:id="@+id/nav_gallery"
-    android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.astronomypictures.controller.ui.gallery.GalleryFragment"
-    tools:layout="@layout/fragment_gallery"/>
 
   <fragment
-    android:id="@+id/nav_slideshow"
-    android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.astronomypictures.controller.ui.slideshow.SlideshowFragment"
-    tools:layout="@layout/fragment_slideshow"/>
+    android:id="@+id/nav_favorites"
+    android:label="@string/menu_favorites"
+    android:name="edu.cnm.deepdive.astronomypictures.controller.FavoritesFragment"
+    tools:layout="@layout/fragment_favorites"/>
 
   <fragment
     android:id="@+id/nav_images"
@@ -33,6 +28,7 @@
     android:name="edu.cnm.deepdive.astronomypictures.controller.ImageFragment"
     tools:layout="@layout/fragment_image">
 
+<!--
     <action
       android:id="@+id/edit_image"
       app:destination="@id/nav_edit_image">
@@ -43,8 +39,10 @@
         android:defaultValue="0L"/>
 
     </action>
+-->
   </fragment>
 
+<!--
   <dialog
     android:id="@+id/nav_edit_image"
     android:name="edu.cnm.deepdive.astronomypictures.controller.EditImageFragment">
@@ -54,4 +52,5 @@
       app:argType="long"
       android:defaultValue="0L"/>
   </dialog>
+-->
 </navigation>

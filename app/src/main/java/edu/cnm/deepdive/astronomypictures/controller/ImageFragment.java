@@ -1,5 +1,7 @@
 package edu.cnm.deepdive.astronomypictures.controller;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,9 +23,10 @@ public class ImageFragment extends Fragment {
   public View onCreateView(
       LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentImageBinding.inflate(inflater, container, false);
-    binding.addNote.setOnClickListener((v) -> Navigation
-        .findNavController(binding.getRoot())
-        .navigate(ImageFragmentDirections.editImage()));
+//
+//    binding.addImages.setOnClickListener((v) -> Navigation
+//        findNavController(binding.getRoot())
+//        .navigate(ImageFragmentDirections.editImage());
     return binding.getRoot();
   }
 

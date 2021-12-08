@@ -9,7 +9,6 @@
 
   <string name="menu_home">Home</string>
   <string name="menu_gallery">Gallery</string>
-  <string name="menu_slideshow">Slideshow</string>
   <string name="menu_image">Images</string>
   <string name="login_failure_message">Unable to sign in with the provided credentials</string>
   <string name="add_image">Add new image</string>
@@ -18,4 +17,6 @@
   <string name="sign_out">Sign out</string>
   <string name="astronomy_image_description">Image Description</string>
   <string name="menu_astronomy_pictures">AstronomyPictures</string>
+  <string name="menu_APOD">APOD</string>
+  <string name="menu_favorites">Favorites</string>
 </resources>

@@ -5,4 +5,5 @@
   <color name="colorAccent">#03DAC5</color>
   <color name="submit">#ff00a000</color>
   <color name="cancel">#ffff0000</color>
+  <color name="drawer_background">#1A1A1A</color>
 </resources>

@@ -5,6 +5,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -30,6 +32,8 @@ public class Image {
   @NonNull
   private String title;
 
+  @Expose
+  @SerializedName("explanation")
   private String description;
 
   @NonNull
@@ -39,6 +43,8 @@ public class Image {
   @NonNull
   private String url;
 
+  @Expose
+  @SerializedName("hdurl")
   private String hdUrl;
 
   private String path;
