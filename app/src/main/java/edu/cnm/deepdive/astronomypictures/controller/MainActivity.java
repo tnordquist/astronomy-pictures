@@ -45,7 +45,7 @@ public class   MainActivity extends AppCompatActivity {
 
     setSupportActionBar(binding.appBarMain.toolbar);
     DrawerLayout drawer = binding.drawerLayout;
-    NavigationView navigationView = binding.navView;
+    NavigationView navigationView = binding.navigationView;
     // Passing each menu ID as a set of Ids because each
     // menu should be considered as top level destinations.
     appBarConfiguration = new AppBarConfiguration.Builder(

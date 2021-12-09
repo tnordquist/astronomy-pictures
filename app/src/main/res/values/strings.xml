@@ -7,8 +7,6 @@
   <string name="nav_header_desc">Navigation header</string>
   <string name="action_settings">Settings</string>
 
-  <string name="menu_home">Home</string>
-  <string name="menu_gallery">Gallery</string>
   <string name="menu_image">Images</string>
   <string name="login_failure_message">Unable to sign in with the provided credentials</string>
   <string name="add_image">Add new image</string>
@@ -19,4 +17,5 @@
   <string name="menu_astronomy_pictures">AstronomyPictures</string>
   <string name="menu_APOD">APOD</string>
   <string name="menu_favorites">Favorites</string>
+  <string name="title">title</string>
 </resources>

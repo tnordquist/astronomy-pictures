@@ -14,13 +14,14 @@ public class ImageRepository {
 
   private final Application context;
   private final ImageDao imageDao;
-
+  private final WebServiceProxy proxy;
 
   public ImageRepository(Application context) {
     this.context = context;
     imageDao = AstronomyDatabase
         .getInstance()
         .getImageDao();
+    proxy = WebServiceProxy.getInstance();
   }
 
   public LiveData<Image> get(long imageId) {
@@ -49,6 +50,10 @@ public class ImageRepository {
     return task.subscribeOn(Schedulers.io());
   }
 
+  public Single<Image> getImage() {
+    return proxy.getImages("BbHQ2Lzi7DPryVzwsMYhQ7NM2NmyXDqzxMTRdIz4")
+        .subscribeOn(Schedulers.io());
+  }
 
   public Completable delete(Image image) {
     return (image.getId() == 0)

@@ -12,28 +12,23 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.astronomypictures.viewmodel.AstronomyPicturesViewModel;
 import edu.cnm.deepdive.astronomypictures.databinding.FragmentAstronomyBinding;
+import edu.cnm.deepdive.astronomypictures.viewmodel.ImageViewModel;
 
 public class AstronomyFragment extends Fragment {
 
-  private AstronomyPicturesViewModel astronomyPicturesViewModel;
+  private ImageViewModel viewModel;
   private FragmentAstronomyBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    astronomyPicturesViewModel =
-        new ViewModelProvider(this).get(AstronomyPicturesViewModel.class);
-
+    viewModel =
+        new ViewModelProvider(getActivity()).get(ImageViewModel.class);
+    getLifecycle().addObserver(viewModel);
     binding = FragmentAstronomyBinding.inflate(inflater, container, false);
-    View root = binding.getRoot();
-
-    final TextView textView = binding.textAstronomypictures;
-    astronomyPicturesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
+    viewModel.getImageLoad().observe(getViewLifecycleOwner(), (image) ->{
+      binding.title.setText(image.getTitle());
     });
-    return root;
+    return binding.getRoot();
   }
 
   @Override

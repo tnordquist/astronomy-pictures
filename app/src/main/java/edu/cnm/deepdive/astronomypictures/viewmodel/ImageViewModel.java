@@ -24,6 +24,7 @@ public class ImageViewModel
   private final MutableLiveData<Throwable> throwable;
   private final MutableLiveData<Long> imageId;
   private final LiveData<Image> image;
+  private final MutableLiveData<Image> imageLoad;
   private final CompositeDisposable pending;
 
   public ImageViewModel(@NonNull Application application) {
@@ -33,10 +34,16 @@ public class ImageViewModel
     imageId = new MutableLiveData<>();
     image = Transformations.switchMap(imageId, repository::get);
     pending = new CompositeDisposable();
+    imageLoad = new MutableLiveData<>();
+    loadImage();
   }
 
   public LiveData<Image> getImage() {
     return image;
+  }
+
+  public LiveData<Image> getImageLoad() {
+    return imageLoad;
   }
 
   public void setImageId(long id) {
@@ -59,6 +66,16 @@ public class ImageViewModel
                 (savedImage) -> {
                 },
                 this::postThrowable
+            )
+    );
+  }
+
+  private void loadImage() {
+    pending.add(
+        repository.getImage()
+            .subscribe(
+                imageLoad::postValue,
+                throwable::postValue
             )
     );
   }

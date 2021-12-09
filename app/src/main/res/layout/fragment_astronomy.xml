@@ -8,13 +8,14 @@
   tools:context=".controller.AstronomyFragment">
 
   <TextView
-    android:id="@+id/text_astronomypictures"
+    android:id="@+id/title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:textAlignment="center"
+    android:text="@string/title"
     android:textSize="20sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
