@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "eb2a1f52905278f5871001be570b6b2e",
+    "identityHash": "a7b9e5d5bf33c0762a7444b067d0a726",
     "entities": [
       {
         "tableName": "user",
@@ -59,7 +59,7 @@
       },
       {
         "tableName": "image",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`image_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `date` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `media_type` TEXT NOT NULL, `url` TEXT NOT NULL, `hdUrl` TEXT, `path` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`image_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `date` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `media_type` TEXT NOT NULL, `url` TEXT, `hdUrl` TEXT, `path` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -76,7 +76,7 @@
           {
             "fieldPath": "date",
             "columnName": "date",
-            "affinity": "INTEGER",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -101,7 +101,7 @@
             "fieldPath": "url",
             "columnName": "url",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "hdUrl",
@@ -224,7 +224,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'eb2a1f52905278f5871001be570b6b2e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a7b9e5d5bf33c0762a7444b067d0a726')"
     ]
   }
 }

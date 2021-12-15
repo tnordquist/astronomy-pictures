@@ -26,9 +26,9 @@ public class Image {
   @NonNull
   private Date created = new Date();
 
-  @Expose
+
   @NonNull
-  private LocalDate date;
+  private String date;
 
   @Expose
   @NonNull
@@ -43,7 +43,6 @@ public class Image {
   private String mediaType;
 
   @Expose
-  @NonNull
   private String url;
 
   @Expose
@@ -70,11 +69,11 @@ public class Image {
   }
 
   @NonNull
-  public LocalDate getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(@NonNull LocalDate date) {
+  public void setDate(@NonNull String date) {
     this.date = date;
   }
 

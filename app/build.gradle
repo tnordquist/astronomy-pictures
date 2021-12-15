@@ -31,8 +31,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField 'String', 'CLIENT_ID',
-                quoted(getProperty("$projectDir/../../../services/astronomypictures.properties", 'client_id'))
+        /*buildConfigField 'String', 'CLIENT_ID',
+                quoted(getProperty("$projectDir/../../../services/astronomypictures.properties", 'client_id'))*/
 
         buildConfigField 'String', 'API_KEY',
                 quoted(getProperty("$projectDir/../../../services/astronomypictures.properties", 'api_key'))

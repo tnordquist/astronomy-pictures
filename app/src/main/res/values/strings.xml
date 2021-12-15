@@ -18,4 +18,6 @@
   <string name="menu_APOD">APOD</string>
   <string name="menu_favorites">Favorites</string>
   <string name="title">title</string>
+    <string name="image_error_message">Image could not be found or was not created. (%s)</string>
+  <string name="error_dismiss">Dismiss</string>
 </resources>

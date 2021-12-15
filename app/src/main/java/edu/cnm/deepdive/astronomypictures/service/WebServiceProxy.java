@@ -19,7 +19,7 @@ import retrofit2.http.Query;
 public interface WebServiceProxy {
 
   @GET("planetary/apod")
-  Single<Image> get(@Query("api_key") String apiKey);
+  Single<Image> getImage(@Query("api_key") String apiKey);
 
 //  default Single<Image> get() {
 //    return get(BuildConfig.API_KEY);
@@ -45,8 +45,8 @@ public interface WebServiceProxy {
       Retrofit retrofit = new Retrofit.Builder()
           .baseUrl(BuildConfig.BASE_URL)
           .addConverterFactory(GsonConverterFactory.create(gson))
-          .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .client(client)
+          .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .build();
       INSTANCE = retrofit.create(WebServiceProxy.class);
     }
