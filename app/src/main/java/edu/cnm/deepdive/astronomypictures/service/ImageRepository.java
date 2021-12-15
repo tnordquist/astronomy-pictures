@@ -50,8 +50,8 @@ public class ImageRepository {
     return task.subscribeOn(Schedulers.io());
   }
 
-  public Single<Image> getImage() {
-    return proxy.getImages("BbHQ2Lzi7DPryVzwsMYhQ7NM2NmyXDqzxMTRdIz4")
+  public Single<Image> get() {
+    return proxy.get("BbHQ2Lzi7DPryVzwsMYhQ7NM2NmyXDqzxMTRdIz4")
         .subscribeOn(Schedulers.io());
   }
 

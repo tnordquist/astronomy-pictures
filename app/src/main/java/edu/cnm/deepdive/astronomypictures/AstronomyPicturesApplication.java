@@ -2,6 +2,7 @@ package edu.cnm.deepdive.astronomypictures;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import com.squareup.picasso.Picasso;
 import edu.cnm.deepdive.astronomypictures.service.AstronomyDatabase;
 import edu.cnm.deepdive.astronomypictures.service.GoogleSignInRepository;
 import io.reactivex.schedulers.Schedulers;
@@ -20,5 +21,10 @@ public class AstronomyPicturesApplication extends Application {
         .delete() //act of deleting something forces room to create the database
         .subscribeOn(Schedulers.io())
         .subscribe();
+    Picasso.setSingletonInstance(
+        new Picasso.Builder(this)
+            .loggingEnabled(BuildConfig.DEBUG)
+            .build()
+    );
   }
 }

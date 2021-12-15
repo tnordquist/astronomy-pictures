@@ -24,6 +24,8 @@ import java.util.Date;
 @TypeConverters({Converters.class})
 public abstract class AstronomyDatabase extends RoomDatabase {
 
+  private static final String DB_NAME = "apod_db";
+
 private static Application context;
 
   public static void setContext(Application context) {

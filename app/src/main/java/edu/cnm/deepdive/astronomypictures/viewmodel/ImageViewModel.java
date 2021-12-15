@@ -11,39 +11,40 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.Transformations;
 import edu.cnm.deepdive.astronomypictures.model.entity.Image;
+import edu.cnm.deepdive.astronomypictures.service.AstronomyDatabase;
 import edu.cnm.deepdive.astronomypictures.service.ImageRepository;
+import edu.cnm.deepdive.astronomypictures.service.WebServiceProxy;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.List;
 
-public class ImageViewModel
-    extends AndroidViewModel
-    implements LifecycleObserver {
-
+public class ImageViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final ImageRepository repository;
   private final MutableLiveData<Throwable> throwable;
   private final MutableLiveData<Long> imageId;
   private final LiveData<Image> image;
-  private final MutableLiveData<Image> imageLoad;
+  private final MutableLiveData<Image> apod;
   private final CompositeDisposable pending;
+  private final AstronomyDatabase database;
 
   public ImageViewModel(@NonNull Application application) {
     super(application);
+    database = AstronomyDatabase.getInstance();
     repository = new ImageRepository(application);
     throwable = new MutableLiveData<>();
     imageId = new MutableLiveData<>();
     image = Transformations.switchMap(imageId, repository::get);
     pending = new CompositeDisposable();
-    imageLoad = new MutableLiveData<>();
-    loadImage();
+    apod = new MutableLiveData<>();
+    loadAPOD();
   }
 
   public LiveData<Image> getImage() {
     return image;
   }
 
-  public LiveData<Image> getImageLoad() {
-    return imageLoad;
+  public LiveData<Image> getApod() {
+    return apod;
   }
 
   public void setImageId(long id) {
@@ -70,11 +71,11 @@ public class ImageViewModel
     );
   }
 
-  private void loadImage() {
+  public void loadAPOD() {
     pending.add(
-        repository.getImage()
+        repository.get()
             .subscribe(
-                imageLoad::postValue,
+                apod::postValue,
                 throwable::postValue
             )
     );

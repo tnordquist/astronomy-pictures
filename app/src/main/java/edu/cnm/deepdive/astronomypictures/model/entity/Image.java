@@ -26,9 +26,11 @@ public class Image {
   @NonNull
   private Date created = new Date();
 
+  @Expose
   @NonNull
   private LocalDate date;
 
+  @Expose
   @NonNull
   private String title;
 
@@ -40,6 +42,7 @@ public class Image {
   @ColumnInfo(name = "media_type", index = true)
   private String mediaType;
 
+  @Expose
   @NonNull
   private String url;
 

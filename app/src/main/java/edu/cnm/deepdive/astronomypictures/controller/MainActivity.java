@@ -18,7 +18,7 @@ import edu.cnm.deepdive.astronomypictures.R;
 import edu.cnm.deepdive.astronomypictures.databinding.ActivityMainBinding;
 import edu.cnm.deepdive.astronomypictures.viewmodel.LoginViewModel;
 
-public class   MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
   private AppBarConfiguration appBarConfiguration;
   private ActivityMainBinding binding;
@@ -38,14 +38,13 @@ public class   MainActivity extends AppCompatActivity {
         startActivity(intent);
       }
     });
-
-    edu.cnm.deepdive.astronomypictures.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(
-        getLayoutInflater());
+    binding = ActivityMainBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
 
     setSupportActionBar(binding.appBarMain.toolbar);
     DrawerLayout drawer = binding.drawerLayout;
     NavigationView navigationView = binding.navigationView;
+
     // Passing each menu ID as a set of Ids because each
     // menu should be considered as top level destinations.
     appBarConfiguration = new AppBarConfiguration.Builder(
