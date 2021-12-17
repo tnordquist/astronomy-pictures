@@ -2,6 +2,7 @@ package edu.cnm.deepdive.astronomypictures.service;
 
 import android.app.Application;
 import androidx.lifecycle.LiveData;
+import edu.cnm.deepdive.astronomypictures.BuildConfig;
 import edu.cnm.deepdive.astronomypictures.model.dao.ImageDao;
 import edu.cnm.deepdive.astronomypictures.model.entity.Image;
 import io.reactivex.Completable;
@@ -51,7 +52,7 @@ public class ImageRepository {
   }
 
   public Single<Image> get() {
-    return proxy.get("BbHQ2Lzi7DPryVzwsMYhQ7NM2NmyXDqzxMTRdIz4")
+    return proxy.get(BuildConfig.API_KEY)
         .subscribeOn(Schedulers.io());
   }
 

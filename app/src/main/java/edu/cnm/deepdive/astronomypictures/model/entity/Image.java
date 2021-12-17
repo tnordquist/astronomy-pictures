@@ -28,7 +28,7 @@ public class Image {
 
   @Expose
   @NonNull
-  private LocalDate date;
+  private String date;
 
   @Expose
   @NonNull
@@ -70,11 +70,11 @@ public class Image {
   }
 
   @NonNull
-  public LocalDate getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(@NonNull LocalDate date) {
+  public void setDate(@NonNull String date) {
     this.date = date;
   }
 

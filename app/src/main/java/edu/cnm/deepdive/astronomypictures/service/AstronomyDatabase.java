@@ -26,7 +26,7 @@ public abstract class AstronomyDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "apod_db";
 
-private static Application context;
+  private static Application context;
 
   public static void setContext(Application context) {
     AstronomyDatabase.context = context;
@@ -45,7 +45,7 @@ private static Application context;
   private static class InstanceHolder {
 
     private static final AstronomyDatabase INSTANCE =
-         Room.databaseBuilder(context, AstronomyDatabase.class, "astronomy-db")
+        Room.databaseBuilder(context, AstronomyDatabase.class, "astronomy-db")
             .build();
 
   }
@@ -62,15 +62,6 @@ private static Application context;
       return (value != null) ? new Date(value) : null;
     }
 
-    @TypeConverter
-    public static Long localDateToLong(LocalDate value) {
-      return (value != null) ? value.toEpochDay() : null;
-    }
-
-    @TypeConverter
-    public static LocalDate longToLocalDate(Long value) {
-      return (value != null) ? LocalDate.ofEpochDay(value) : null;
-    }
 
   }
 }
